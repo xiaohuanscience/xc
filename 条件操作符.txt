@@ -1,0 +1,14 @@
+ 三元运算符
+  let accessAllowed;
+let age = prompt('How old are you?', '');
+
+if (age > 18) {
+  accessAllowed = true;
+} else {
+  accessAllowed = false;
+}
+
+alert(accessAllowed);
+
+替代
+let accessAllowed = (age > 18) ? true : false;（语句简洁

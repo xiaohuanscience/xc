@@ -1,0 +1,40 @@
+
+1,Function(函数)是JavaScript程序的主要“建造块”。它们使得在不重复书写代码的情况下可以执行多次相同的代码。
+函数格式
+function name(parameters, delimited, by, comma) {
+  /* code */
+}
+
+2,函数在访问内部没有的变量时候才会访问外部变量
+
+3,在访问内部变量时候
+function showMessage() {
+  let message = "Hello, I'm JavaScript!"; // local variable
+
+  alert( message );
+}
+
+showMessage(); // Hello, I'm JavaScript!
+
+alert( message ); // <-- Error! The variable is local to the function
+
+4,在访问外部变量时候
+let userName = 'John';
+
+function showMessage() {
+  let message = 'Hello, ' + userName;
+  alert(message);
+}
+
+showMessage(); // Hello, John
+
+注意:如果内部变量没有加let时候,内部函数就会访问外部变量.内外的变量可以有相同项
+showMessage(..)     // 展示一个message
+getAge(..)          // 输出年龄(gets it somehow)
+calcSum(..)         // 将数字合计并输出
+createForm(..)      // 创建一个表单(and usually returns it)
+checkPermission(..) // 检查权限，返回true / false
+
+传递给函数参数的变量会将其值复制到相应的局部变量中。
+一个函数可以访问外部变量。虽然函数内部可以访问外部变量，但是外部代码不可以访问函数内部的变量。
+函数可以返回一个值。如果没有明确的返回值，函数的返回值就是undefined。

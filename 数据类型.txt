@@ -1,0 +1,21 @@
+    
+    Infinity = ∞。它是一个比任何值都大的他数值。
+
+    NAN      一个数学上的运算错误
+    Nan 具有粘粘性
+    如果 NaN 存在于某个数学计算表达式的某个位置，那么最终的操作结果就一定是 NaN。
+
+    双引号和单引号都是简单引号，它们在 JavaScript 中没有任何区别。
+    反引号是扩展功能的引号，它允许通过 ${...} 的形式在字符串中嵌入 JavaScript 的变量和表达式。
+    
+    字符串string
+
+    一个 boolean 类型只有两个值：true 和 false
+　　逻辑操作 isgreater
+　　let name = "Ilya";
+　　
+　　alert( `hello ${1}` ); // hello 1
+　　
+　　alert( `hello ${"name"}` ); // hello name
+　　
+　　alert( `hello ${name}` ); // hello Ilya

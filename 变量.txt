@@ -1,0 +1,10 @@
+
+
+   常量const//这个量不可修改
+       指固定量，如颜色，字号等
+
+   变量 let
+        class
+        return
+        function
+        可以后期随意修改

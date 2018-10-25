@@ -1,0 +1,39 @@
+1,”while“循环
+while (condition) {
+  // code
+  // so-called "loop body"
+}
+
+2,“do…while” 循环
+do {
+  // loop body
+} while (condition);
+
+3,”for“循环
+for (begin; condition; step) {
+  // ... loop body ...
+}
+
+4,break指令来在任何时刻强行终止循环
+let sum = 0;
+
+while (true) {
+
+  let value = +prompt("Enter a number", '');
+
+  if (!value) break; // (*)
+
+  sum += value;
+
+}
+alert( 'Sum: ' + sum );
+
+5,continue减少内嵌层次
+continue是更加轻量的break。它不会终止整个的循环。实际上，它终止当前的迭代并且强行开启一个新的迭代(如果检查条件为true)
+for (let i = 0; i < 10; i++) {
+
+  // if true, skip the remaining part of the body
+  if (i % 2 == 0) continue;
+
+  alert(i); // 1, then 3, 5, 7, 9
+}

@@ -1,0 +1,23 @@
+switch语句具有一个或多个case子句和一个可选的default子句。
+switch(x) {
+  case 'value1':  // if (x === 'value1')
+    ...
+    [break]
+
+  case 'value2':  // if (x === 'value2')
+    ...
+    [break]
+
+  default:
+    ...
+    [break]
+}
+当希望两个case分组同时执行同样的命令的时候
+   case 'valuel 1':
+     ...
+     break;
+   case 'valuel 2':
+   case 'valuel 3':
+     ...
+     break;
+   

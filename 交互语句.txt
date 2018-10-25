@@ -1,0 +1,15 @@
+ 交互语句
+ alert   提示   alert（‘xxx’）；
+                alert(message);
+
+ prompt  复读   prompt（‘xxx’，‘’）
+                alert（`xxx${}xxx`);
+                let age = prompt('How old are you?', 100);
+
+                alert(`You are ${age} years old!`); // You are 100 years old!
+
+ confirm 是否   let xx=confirm（‘xxx’）；
+                alert（xx）；
+                let isBoss = confirm("Are you the boss?");
+
+                alert( isBoss ); // true if OK is pressed
