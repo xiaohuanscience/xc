@@ -1,0 +1,43 @@
+
+回调的含义：我们将函数当作值进行传递，并期待其在合适的情况下被调用执行。在上述示例中，showOK就是答案为yes情况下的回调函数，showCancle就是答案为no情况下的回调函数。
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+
+function showOk() {
+  alert( "You agreed." );
+}
+
+function showCancel() {
+  alert( "You canceled the execution." );
+}
+
+// usage: functions showOk, showCancel are passed as arguments to ask
+ask("Do you agree?", showOk, showCancel);
+可以转变为
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+
+ask(
+  "Do you agree?",
+  function() { alert("You agreed."); },
+  function() { alert("You canceled the execution."); }
+);
+
+总结
+    函数是值。它们可以被赋值，赋值或定义于代码的任何位置。
+如果函数作为一个独立语句定义为代码主执行流程的任何部分，就称其为一个函数定义。
+    如果函数作为表达式的一部分而被创建，就称其为一个函数表达式。
+函数定义会在所在代码块被执行之前被处理，它们在整个代码块内随处可见。
+    函数表达式将在执行流达到时才会被执行。
+在绝大多数情况下，如果我们需要定义一个函数，应该优先考虑使用一个函数定义，因为它的可见性先于代码定义本身。这给了开发者更多关于代码顺序的自由，而且代码往往也更加可读。
+
+    所以，我们应该只在代码定义不适用的情况下，再考虑使用代码表达式。在本章中，我们已经学习了很多关于使用代码表达式的例子，后期将会接触更多的例子。
+
+    箭头函数对于单行行为函数非常便利。它具有如下的两个特性：
+
+    没有大括号的情况：(...args) => expression 右侧是一个表达式：函数会被执行并且返回一个执行结果。
+    具有大括号的情况：(...args) => { body } 大括号允许我们在函数中实现多行行为代码，但是，也需要我们显式地使用return指令返回结果。

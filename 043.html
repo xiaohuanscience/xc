@@ -1,0 +1,32 @@
+<html>
+        <script>
+                alert('thinking');
+            function ask(question, yes, no) {//z=x,y
+              if (confirm(question)) yes()
+              else no();
+            }
+            
+            function xixi() {
+              alert( "You agreed." );//x=...
+            }
+            
+            function haha() {
+              alert( "You canceled the execution." );//y=...
+            }
+            
+            // usage: functions showOk, showCancel are passed as arguments to ask
+            ask("Do you agree?", xixi, haha);
+            </script>
+ <script>
+     // function ask(question, yes, no) {
+    //if (confirm(question)) yes()
+  // else no();
+ // }
+  
+  //ask(
+   // "Do you agree?",
+   //function() { alert("You agreed."); },
+   // function() { alert("You canceled the execution."); }
+ // );
+  </script>
+</html>

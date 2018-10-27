@@ -1,21 +1,9 @@
-<html>
-        <head>
-            <meta charset="utf-8">
-            <title>我是傻瓜</title>
-            <style type="text/css">
-            p{color:blueviolet}
-            </style>
-        </head>
-        <body>
-            <h1>你是傻瓜吗？</h1>
-            <p id="kuma">是傻瓜请点是</p>
-            <script>
-                function myFunction1()
-            {document.getElementById("kuma").innerHTML="知道就好，贵有自知之明啊."}
-                function myFunction2()
-            {document.getElementById("kuma").innerHTML="第二句东西写在这里."}
-                </script>
-        <button type="button" onclick="myFunction1()">是<button>
-        <button type="button" onclick="myFunction2()">否<button>
-        </body>
-</html>
+<script>
+  let age = prompt("What is your age?", 18);
+
+let welcome = (age < 18) ?
+  () => alert('Hello') :
+  () => alert("Greetings!");
+
+welcome(); // ok now
+</script>
